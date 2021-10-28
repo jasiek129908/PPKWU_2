@@ -9,6 +9,7 @@ public class Controller {
 
     @GetMapping("/string")
     public String getInformationAboutString(@RequestParam String text){
+
         return text;
     }
 }
