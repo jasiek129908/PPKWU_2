@@ -17,8 +17,22 @@ public class StringUtility {
         this.specialCharacterCounter = 0;
     }
 
-    public void processTheString(){
-
+    public void processTheString() {
+        textToProcess.chars().forEach((character) -> {
+            if (Character.isUpperCase(character)) {
+                upperCaseLettersCounter++;
+            } else if (Character.isLowerCase(character)) {
+                lowerCaseLettersCounter++;
+            } else if (Character.isDigit(character)) {
+                digitCounter++;
+            } else if (Character.isWhitespace(character)) {
+                whiteSpaceCounter++;
+            } else {
+                specialCharacterCounter++;
+            }
+        });
+        System.out.printf("litery male: %d duze: %d cyfry: %d biale: %d specjalne: %d",
+                lowerCaseLettersCounter,upperCaseLettersCounter,digitCounter,whiteSpaceCounter,specialCharacterCounter);
     }
 
 
