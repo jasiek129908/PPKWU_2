@@ -10,7 +10,7 @@ public class Controller {
 
     @GetMapping("/string")
     public ResponseEntity<Response> getInformationAboutString(@RequestParam String text){
-        Response response = new StringUtility("aaaBBB   123 ****").processTheString();
+        Response response = new StringUtility(text).processTheString();
         return ResponseEntity.ok(response);
     }
 }

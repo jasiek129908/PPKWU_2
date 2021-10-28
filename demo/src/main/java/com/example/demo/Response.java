@@ -1,21 +1,67 @@
 package com.example.demo;
 
-import java.io.Serializable;
-
 public  class Response {
     private String textToProcess;
-    private int upperCaseLettersCounter;
-    private int lowerCaseLettersCounter;
+    private int upperCaseCounter;
+    private int lowerCaseCounter;
     private int digitCounter;
     private int whiteSpaceCounter;
     private int specialCharacterCounter;
 
     public Response(String textToProcess, int upperCaseLettersCounter, int lowerCaseLettersCounter, int digitCounter, int whiteSpaceCounter, int specialCharacterCounter) {
         this.textToProcess = textToProcess;
-        this.upperCaseLettersCounter = upperCaseLettersCounter;
-        this.lowerCaseLettersCounter = lowerCaseLettersCounter;
+        this.upperCaseCounter = upperCaseLettersCounter;
+        this.lowerCaseCounter = lowerCaseLettersCounter;
         this.digitCounter = digitCounter;
         this.whiteSpaceCounter = whiteSpaceCounter;
+        this.specialCharacterCounter = specialCharacterCounter;
+    }
+
+    public String getTextToProcess() {
+        return textToProcess;
+    }
+
+    public void setTextToProcess(String textToProcess) {
+        this.textToProcess = textToProcess;
+    }
+
+    public int getUpperCaseCounter() {
+        return upperCaseCounter;
+    }
+
+    public void setUpperCaseCounter(int upperCaseCounter) {
+        this.upperCaseCounter = upperCaseCounter;
+    }
+
+    public int getLowerCaseCounter() {
+        return lowerCaseCounter;
+    }
+
+    public void setLowerCaseCounter(int lowerCaseCounter) {
+        this.lowerCaseCounter = lowerCaseCounter;
+    }
+
+    public int getDigitCounter() {
+        return digitCounter;
+    }
+
+    public void setDigitCounter(int digitCounter) {
+        this.digitCounter = digitCounter;
+    }
+
+    public int getWhiteSpaceCounter() {
+        return whiteSpaceCounter;
+    }
+
+    public void setWhiteSpaceCounter(int whiteSpaceCounter) {
+        this.whiteSpaceCounter = whiteSpaceCounter;
+    }
+
+    public int getSpecialCharacterCounter() {
+        return specialCharacterCounter;
+    }
+
+    public void setSpecialCharacterCounter(int specialCharacterCounter) {
         this.specialCharacterCounter = specialCharacterCounter;
     }
 
@@ -23,8 +69,8 @@ public  class Response {
     public String toString() {
         return "Response{" +
                 "textToProcess='" + textToProcess + '\'' +
-                ", upperCaseLettersCounter=" + upperCaseLettersCounter +
-                ", lowerCaseLettersCounter=" + lowerCaseLettersCounter +
+                ", upperCaseLettersCounter=" + upperCaseCounter +
+                ", lowerCaseLettersCounter=" + lowerCaseCounter +
                 ", digitCounter=" + digitCounter +
                 ", whiteSpaceCounter=" + whiteSpaceCounter +
                 ", specialCharacterCounter=" + specialCharacterCounter +
