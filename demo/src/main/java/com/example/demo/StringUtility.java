@@ -17,7 +17,7 @@ public class StringUtility {
         this.specialCharacterCounter = 0;
     }
 
-    public void processTheString() {
+    public Response processTheString() {
         textToProcess.chars().forEach((character) -> {
             if (Character.isUpperCase(character)) {
                 upperCaseLettersCounter++;
@@ -31,9 +31,8 @@ public class StringUtility {
                 specialCharacterCounter++;
             }
         });
-        System.out.printf("litery male: %d duze: %d cyfry: %d biale: %d specjalne: %d",
-                lowerCaseLettersCounter,upperCaseLettersCounter,digitCounter,whiteSpaceCounter,specialCharacterCounter);
+        return new Response(textToProcess,upperCaseLettersCounter,lowerCaseLettersCounter,digitCounter,whiteSpaceCounter,specialCharacterCounter);
     }
-
-
 }
+
+
